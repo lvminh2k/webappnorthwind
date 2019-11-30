@@ -8,7 +8,7 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 #backend
 sudo docker build -t backend .
-sudo docker run -d -p 8080:8080 backend
+sudo docker run -d --name backend -p 8080:8080 backend
 
 #deploy db
 sudo docker load --input postgres_11.2-alpine.tar
