@@ -19,7 +19,7 @@ def create_table():
     s1 = c2.createTable()
     return s1
 
-@app.route("/create_table")
+@app.route("/create_db")
 def create_db():
     ConnectionString = 'user=postgres password=postgres host=10.0.2.15 port=5432'
     c2 = do.Customer(ConnectionString)
