@@ -1,10 +1,11 @@
 from flask import Flask
+import BusinessObjects as bo 
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    c1 = Customer(1, 'DAU xanh', 'Peter', '566 Nui Thanh', 'Danang', '50000', 'Vietnam')
+    c1 = bo.Customer(1, 'DAU xanh', 'Peter', '566 Nui Thanh', 'Danang', '50000', 'Vietnam')
     return c1.CustomerName
 
 if __name__ == "__main__":
