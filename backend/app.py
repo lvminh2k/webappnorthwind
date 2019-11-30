@@ -19,5 +19,12 @@ def create_table():
     s1 = c2.createTable()
     return s1
 
+@app.route("/create_table")
+def create_db():
+    ConnectionString = 'database=postgres-northwind user=postgres password=postgres host=10.0.2.15 port=5432'
+    c2 = do.Customer(ConnectionString)
+    s1 = c2.createDB()
+    return s1
+    
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
