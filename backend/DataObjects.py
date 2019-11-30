@@ -6,7 +6,7 @@ class Customer:
         #database='postgres-northwind', user='postgres', password='postgres', host="127.0.0.1", port="5432"
         con = None
         try:
-            con = psycopg2.connect(ConnectionString)
+            con = psycopg2.connect(self.ConnectionString)
             cur = con.cursor()
             cur.execute("CREATE TABLE TblCustomers (CustomerID int IDENTITY(1,1) PRIMARY KEY, CustomerName varchar(255), ContactName varchar(255), Address varchar(255), City varchar(255), PostalCode varchar(255), Country varchar(255));")
             con.commit()
