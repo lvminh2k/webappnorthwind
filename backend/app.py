@@ -14,7 +14,7 @@ def hello():
 
 @app.route("/create_table")
 def create_table():
-    ConnectionString = 'database=postgres user=postgres password=postgres host=10.0.2.15 port=5432'
+    ConnectionString = 'database=northwind user=postgres password=postgres host=10.0.2.15 port=5432'
     c2 = do.Customer(ConnectionString)
     s1 = c2.createTable()
     return s1
