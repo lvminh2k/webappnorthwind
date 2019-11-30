@@ -1,5 +1,5 @@
 CREATE TABLE TblCustomers (
-    CustomerID int IDENTITY(1,1) PRIMARY KEY,
+    CustomerID SERIAL PRIMARY KEY,
     CustomerName varchar(255),
     ContactName varchar(255),
     Address varchar(255),
@@ -7,3 +7,5 @@ CREATE TABLE TblCustomers (
     PostalCode varchar(255),
     Country varchar(255)
 );
+
+id              
