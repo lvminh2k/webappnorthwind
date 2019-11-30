@@ -7,5 +7,4 @@ CREATE TABLE TblCustomers (
     PostalCode varchar(255),
     Country varchar(255)
 );
-
-id              
+            
