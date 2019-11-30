@@ -6,6 +6,12 @@ import DataObjects as do
 app = Flask(__name__)
 
 db_ip = os.getenv("db_ip")
+ConnectionData = {}
+ConnectionData['user'] = 'postgres'
+ConnectionData['password'] = 'postgres'
+ConnectionData['host'] = '10.0.2.15'
+ConnectionData['port'] = '5432'
+ConnectionData['database'] = 'northwind'
 
 @app.route("/")
 def hello():
@@ -13,9 +19,9 @@ def hello():
     return c1.CustomerName
 
 @app.route("/test_insert")
-def create_table():
-    ConnectionString = 'database=northwind user=postgres password=postgres host=10.0.2.15 port=5432'
-    c2 = do.Customer(ConnectionString)
+def test_insert():
+    #ConnectionString = 'database=northwind user=postgres password=postgres host=10.0.2.15 port=5432'
+    c2 = do.Customer(ConnectionData)
     c1 = bo.Customer(1, 'DAU xanh', 'Peter', '566 Nui Thanh', 'Danang', '50000', 'Vietnam')
     s1 = c2.insert(c1)
     return s1
