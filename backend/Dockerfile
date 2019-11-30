@@ -1,6 +1,9 @@
 # Use an official Python runtime as a parent image
 FROM python:3.6-slim
 
+RUN apt-get update
+RUN apt-get install -y libpq-dev python3-dev build-essential postgresql-server-dev-all
+
 # Set the working directory to /app
 WORKDIR /app
 
