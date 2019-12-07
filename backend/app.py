@@ -26,7 +26,7 @@ def test_insert():
     return s1
 
 @app.route('/test_send_receive', methods=['POST'])
-def test_send_receive()
+def test_send_receive():
     x = request.json['x']
     y = x + 1
     result = {}
