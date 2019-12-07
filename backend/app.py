@@ -45,6 +45,7 @@ def user_get_by_id():
 def user_insert():
     data = request.json
     c1 = bo.Customer(data['CustomerID'], data['CustomerName'], data['ContactName'], data['Address'], data['City'], data['PostalCode'], data['Country'])
+    c2 = do.Customer(ConnectionData)
     s1 = c2.insert(c1)
     result = {}
     result['message'] = s1
