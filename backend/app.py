@@ -43,7 +43,12 @@ def user_get_by_id():
 
 @app.route('/user/insert', methods=['POST'])
 def user_insert():
-    return 'ok'
+    data = request.json
+    c1 = bo.Customer(data['CustomerID'], data['CustomerName'], data['ContactName'], data['Address'], data['City'], data['PostalCode'], data['Country'])
+    s1 = c2.insert(c1)
+    result = {}
+    result['message'] = s1
+    return jsonify(result), 200
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
