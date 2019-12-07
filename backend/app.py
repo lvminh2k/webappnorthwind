@@ -25,6 +25,15 @@ def test_insert():
     s1 = c2.insert(c1)
     return s1
 
+@app.route('/test_send_receive', methods=['POST'])
+def test_send_receive()
+    x = request.json['x']
+    y = x + 1
+    result = {}
+    result['y'] = y
+    return jsonify(result), 200
+
+
 @app.route('/user/get_by_id', methods=['POST'])
 def user_get_by_id():
     user_id = request.json['user_id']
