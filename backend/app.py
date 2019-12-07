@@ -27,7 +27,7 @@ def test_insert():
 
 @app.route('/user/get_by_id', methods=['POST'])
 def user_get_by_id():
-    user_id = request.data['user_id']
+    user_id = request.json['user_id']
     return user_id
 
 @app.route('/user/insert', methods=['POST'])
