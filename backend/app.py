@@ -1,5 +1,4 @@
-from flask import Flask, jsonify
-from flask-restful import request
+from flask import Flask, jsonify, request
 import os
 import BusinessObjects as bo 
 import DataObjects as do
