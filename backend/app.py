@@ -28,8 +28,9 @@ def test_insert():
 @app.route('/user/get_by_id', methods=['POST'])
 def user_get_by_id():
     user_id = request.json['user_id']
-
-    return str(user_id)
+    result = {}
+    result['user_id'] = 1
+    return jsonify(result), 200
 
 @app.route('/user/insert', methods=['POST'])
 def user_insert():
